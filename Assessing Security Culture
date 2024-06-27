@@ -1,0 +1,72 @@
+Employees at SilverCorp are increasingly using their own personal devices for company work.
+
+    Specifically, over half of all employees check their work email and communications via Slack on their personal mobile phones.
+
+    Another 25% of employees are doing other work-related activities, using work accounts and work-related applications, on their personal phone.
+
+Allowing sensitive work information to be shared on employees’ personal devices has a number of security implications. You must research these security risks and use the security culture framework to develop a plan to mitigate the concerns.
+
+Step 1: Measure and Set Goals
+
+1) Using outside research, indicate the potential security risks of allowing employees to access work information on their personal devices. Identify at least three potential attacks that can be carried out.
+    Malware infections, stolen devices, unprotected (public) wifi, downloading of pirated materials
+2) Based on the previous scenario, what is the preferred employee behavior? (For example, if employees were downloading suspicious email attachments, the preferred behavior would be that employees only download attachments from trusted sources.)
+    Installing company approved antivirus software and a host-based intrusion detection system, this may help to mitigate the risk of infecting valuable company assets as well as stealing log-on credentials. 
+    
+    Respectively, the company can issue a policy regarding the issuing of encrypted and secure laptops/computers for its employees. Alternatively, the company can have the policy to for the employee to authorize the encrypt an employee's personal devices. In other words, the employee can be given a choice whether to use the company issued encrypted laptop or have their own laptop/mobile encrypted.  
+    
+    If the employee is to use an untrusted and unprotected wifi network, such as a public network, they are required to use a VPN connection, such as NordVPN, ProtonVPN, SurfShark, VPN through AV Software, or a portable VPN router (if traveling), when accessing company data, and for the sharing of files, and for securing communications during virtual meetings.
+
+    Prevent the employee from downloading illegal and pirated materals from untrusted, unsecured websites by setting up firewall rules on the employees laptop.  
+
+3) What methods would you use to measure how often employees are currently not behaving according to the preferred behavior? (For example, conduct a survey to see how often people download email attachments from unknown senders.)
+
+    Increase cyber awareness: Implement a training program that teaches the employees how to identify social engineering and phishing attacks, and how they can help mitigate the risk of sensitive data loss and cyber attacks on themselves, collegaues and the company.  Also, to emphasize the importance of never leaaving any mobile device unlocked and unattended for any amount of time, in any location, even at home.  
+    Installing and configuring the use of employee monitoring software that will allow the IT and Security departments to "monitor mobile app activity such as texts, emails, phone calls, and app usage". (Auvik, 2024)    
+    For monitoring mobile devices, from on-premises, the company shall install and configure a Mobile Device Managment software (MDM), if the mobile devices are owned by the company.  If not owned by the company, a Mobile Application Management (MAM) software shall be installed and configured.  Mobile Application Management allows for the "Control over mobile apps related to business functions, but not the entire mobile device". (Auvik, 2024)
+
+
+4) What is the goal that you would like the organization to reach regarding this behavior? (For example, to have less than 5% of employees downloading suspicious email attachments.)
+
+    The goal is to have less than 20% of employees from downloading and installing untrusted/unverified apps, and email attachments within 6 months of initiating the policies. Within 12 months, have less than 5% downloading/installing untrusted and unverified apps and email attachments.    
+
+
+Step 2: Involve the Right People
+ 
+5) List at least five employees or departments that should be involved. For each person or department, describe in 2–3 sentences what their role and responsibilities will be.
+
+   Legal Counsel
+      They will provide advice, direction and matter management to contracts, compliance, and other matters to mitigate risk and facilitate business objectives.  The legal counsel will also provide the necessary legal matter regarding data privacy and business monitoring of mobile devices, either owned by the company or the employee.  
+  Chief Operating Officer
+      We would involve the CEO as it is important as a company for higher up leadership to be involved and set the tone as to how important cybersecurity is. While they won’t have an active role addressing these security risks, it is important to involve them and make them aware of the risks and requirements
+  Chief Financial Officer
+      Determining the financial feasibility in instituting the new company policies. For example determining whether the company can afford to issue new encrypted phones or laptops to the employees
+  Chief Information Security Officer
+      As a CISO your main concern is securing all company data and systems, they would be an important person to include on our team. They would be responsible for managing risk, setting policies and standards that protect the company assets.
+  Human Resources Manager
+      They would be responsible for making sure every employee goes through training as well as for enforcing remedial training for repeat offenders. They would also set policy for expectations and disciplinary procedures for noncompliance.
+
+Step 3: Training Plan
+
+6) How frequently will you run training? What format will it take (e.g., in-person, online, a combination of both)?
+
+[Enter answer here]
+
+
+7) What topics will you cover in your training, and why? (This should be the bulk of the deliverable.)
+
+[Enter answer here]
+
+
+8) After you’ve run your training, how will you measure its effectiveness? 
+
+[Enter answer here]
+
+
+Bonus: Other Solutions
+
+List at least two other potential solutions. For each one, indicate the following:
+  9) What type of control is it? Administrative, technical, or physical? 
+  10) What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
+  11) What is one advantage of each solution? 
+  12) What is one disadvantage of each solution?
