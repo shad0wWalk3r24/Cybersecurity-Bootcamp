@@ -25,10 +25,11 @@ Step 1: Measure and Set Goals
     Installing and configuring the use of employee monitoring software that will allow the IT and Security departments to "monitor mobile app activity such as texts, emails, phone calls, and app usage". (Auvik, 2024)    
     For monitoring mobile devices, from on-premises, the company shall install and configure a Mobile Device Managment software (MDM), if the mobile devices are owned by the company.  If not owned by the company, a Mobile Application Management (MAM) software shall be installed and configured.  Mobile Application Management allows for the "Control over mobile apps related to business functions, but not the entire mobile device". (Auvik, 2024)
 
+    Initiate a test using fake phishing emails, to determine how many employee's are clicking on the email.  
 
 4) What is the goal that you would like the organization to reach regarding this behavior? (For example, to have less than 5% of employees downloading suspicious email attachments.)
 
-    The goal is to mitigate the risks have less than 25% of employees from downloading and installing untrusted/unverified apps, and email attachments within 3 months of initiating the policies. Within 12 months, have less than 5% downloading/installing untrusted and unverified apps and email attachments.  
+    The goal is to mitigate the risks, by have less than 25% of employees from downloading and installing untrusted/unverified apps, and email attachments within 3 months of initiating the policies. Within 12 months, have less than 5% downloading/installing untrusted and unverified apps and email attachments.  
 
 
 Step 2: Involve the Right People
@@ -36,43 +37,71 @@ Step 2: Involve the Right People
 5) List at least five employees or departments that should be involved. For each person or department, describe in 2–3 sentences what their role and responsibilities will be.
 
 Legal Counsel
-    They will provide advice, direction and matter management to contracts, compliance, and other matters to mitigate risk and facilitate business objectives.  The legal counsel will also provide the necessary legal matter regarding data privacy and business monitoring of mobile devices, either owned by the company or the employee.  
-Chief Operating Officer
-    We would involve the CEO as it is important as a company for higher up leadership to be involved and set the tone as to how important cybersecurity is. While they won’t have an active role addressing these security risks, it is important to involve them and make them aware of the risks and requirements
+    They will provide advice, direction and matter management to contracts, compliance, and other matters to mitigate risk and facilitate business objectives.  The legal counsel will also provide the necessary legal matter regarding data privacy and business monitorings of mobile devices, either owned by the company or the employee.    
+Chief Operation Officer
+    We would involve the COO as it is important as a company to have a member of the executive level leadership to be involved and set the tone as to how important cybersecurity is. While they won’t have an active role addressing these security risks, it is important to involve them and make them aware of the risks and requirements.  They can have a higher level of communications with the CEO who in turns communicates with the board of directors. Support analysis of, and reporting on, the organization's operations and key decisions.  Acts as the strategic advisor and liasion, develops and manages communications on behalf of the CEO.  
 Chief Financial Officer
-    Determining the financial feasibility in instituting the new company policies. For example determining whether the company can afford to issue new encrypted phones or laptops to the employees
+    The CFO will provide information, making decisions and assist in the financial aspects of implementing the necessary access controls projects are viable, feasible and within budgets.
 Chief Information Security Officer
-    They would be responsible for managing risk, setting policies and standards that protect the company's most valuable assets.
-Human Resources Manager
+    They would be responsible for managing risk, setting policies and standards that protect the company's most valuable assets.  Determining the most efficient, effective and secure methods of using monitoring tools for compliance and 
+Human Resources Director
     They would be responsible for making sure every employee goes through training as well as for enforcing remedial training for repeat offenders. They would also set policy for expectations and disciplinary procedures for noncompliance.  They will be repsonsible for writing, maintaing, implementing and updating the training materials and policies. 
 
 Step 3: Training Plan
 
 6) How frequently will you run training? What format will it take (e.g., in-person, online, a combination of both)?
 
-    We will conduct periodic questionnaires and annual training program for all employees, including senior level management.  The quesionnaires will be emailed and each person must complete and submit the questionnaire.  The annual training will be conducted primarily in-person and each person will be given a test at the end to reinforce the security training material.  If an employee is currently traveling, then online training will be provided.  They will be emailed a copy of the security traininng test after the training session had concluded.    
+Before implementing and "forcing" this change onto the employees.  We will first survey them for suggestions; by invloving the employees in this process will help to foster and encourage their behaviours to change and foster a more inclusive security-minded environment.  We will conduct periodic questionnaires and annual training program for all employees, including senior level management.  BY involving all levels of employees broadens our   The quesionnaires will be emailed and each person must complete and submit the questionnaire to the Human Resources Department.  The annual training will be conducted primarily in-person and each person will be given a test at the end to reinforce the security training material.  If an employee is currently traveling, then online training will be provided.  They will be emailed a copy of the security traininng test after the training session had concluded. 
 
 
 7) What topics will you cover in your training, and why? (This should be the bulk of the deliverable.)
 
-    How to identify social engineering attacks, securing mobile devices, security compliance initiatives, 
+    How to identify social engineering, phishing, vishing, smishing attacks, securing mobile devices, security compliance initiatives, how to prevent tailgating, why every employee is vital to the security, well-being, and survival of the company.
+
+     State of the company: The designated officials will share statistics regarding the companies employee's and the risk of cybersecurity threats. Any relevant data regarding the past incidents will also be shared.
+
+    Emphasizing the company's culture that cybersecurity is "everyone's responsibility"
+
+    Information regarding who to contact and report if an employee suspects an incident occurred, recieves a suspiscious e-mail, phone call, SMS, etc.
+
+    Introduction to reward programs for compliance with the cybersecurity policies or reporting incidents.
+
+    Phishing scams: Emphasizing not to click unfamiliar links in external e-mail. Emphasizing the the company's adminstration will never ask the employee's to directly provide password etc
+
+    Information regarding the common types of hacking tricks such as malware, ransomware, brut force with examples of data breaches with other companies
+
+    Online training with the installation of anti-malware software on the employee's personal devices
+
+    Certain employees maybe more vulnerable, especially if they need to routinely perform work related activities from home. For example residents who need to obtain access to electronic medical records of patients from home. Such employees may be better off with using company's issued divices with secure incription at home. An alternative will be encrypting the employee's personal devices (if they are willing ) for remote work.
+
+    The emyployees will be educated regarding the 2 or 4 factor identification system to prevent identity theft. The online training will inform the employees with examples regarding the mechanisms of identity theft along with videos of how to set this up at the start of their employment
+
+    The employees will be educated about the company's policies of not using external USB, how to obtain encryted USBs for work that maybe issued by the company if needed.
+
+    The training will also include information regarding the alternatives to using personal devices at work such as remote desktop connection, working on the server that is protected against a firewall rather than personal computer for any data related activity. Using encrypted USBs issued by the company rather than the external USBs.
+
+    Adopting common sense measures including logging out before leaving a computer, Limiting access to confidential information on a need to know basis. Not disclosing protected information on social media. Reporting incidents of potential data breaches e-g lost or stolen laptop
+
 
 
 8) After you’ve run your training, how will you measure its effectiveness? 
+Measuring the User Impact: Through the use of quarterly questionnaires and yearly security assessments and training. Conduct a quantitative analysis by analyzing the number of reported incidents during a monthly, 3-month, 6-month and 12-month, 15-months, 18-months and 24-months basis. 
 
-    Through the use of questionnaires, and testing
+Measuring Behaviours: Through the use of simulated phishing, vishing, smishing, and whaling attacks.  The hiring of a 3rd party to conduct a social engineering attack and even a physical breach.  These will measure a very large portion of the company's organisation at all levels to provide a more in-depth qualitative analysis of the training and its impact on the 
+
+Measuring Culture: Encouraging employees to participate in building the cybersecurity culture, and learn to understand their role in keeping the organization safe and accept responsibility to help remove threats. The human factor is the weakest link in security practices, but with a cybersecurity culture, we can turn out weakest weakest link into our strongest asset. 
+
 
 
 Bonus: Other Solutions
 
 List at least two other potential solutions. For each one, indicate the following:
     9) What type of control is it? Administrative, technical, or physical?  Administrative and technical
-        The 1st solution is administrative.
-        The 2nd solution is physical.
-
-    10) What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating? Administrative controls 
-        The goal of the 1st solution is 
-  
-    11) What is one advantage of each solution? 
-
-    12) What is one disadvantage of each solution? 
+       a) What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating? Administrative controls 
+        The goal of the 2nd solution is 
+        The goal of the 3rd solution is allow mobile devices on a segmented network, that is segregated from the main network and access will be allowed only after accepting the EULA authorising the company special permissions to monitor their device(s) without legal ramifications.  
+       b) What is one advantage of each solution? 
+      The advantage for having mobile devices on a segmented network, it provides some network security by limiting the attack surface and preventing lateral movements into other networks.                                     c) What is one disadvantage of each solution? 
+        A disadvantage to the 1st solution is 
+        A disadvantage for the 2nd solution is by adding more devices or users to the segmented network could necessitate the creation of additional segments, or an upgrade to existing ones, leading to increased costs and complexity.
+      
