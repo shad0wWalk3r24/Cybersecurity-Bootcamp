@@ -51,14 +51,18 @@ mkdir Dealer_Analysis Player_Analysis Player_Dealer_Correlation
 
 Create empty files called Notes_<Directory Name>.txt under each subdirectory to store investigation notes.
 
-cd Dealer_Analysis && touch Notes_Dealer_Analysis && cd ../
+cd Dealer_Analysis && touch Notes_Dealer_Analysis && cd ../Player_Analysis && touch Notes_Player_Analysis && cd ../Player_Dealer_Correlation && touch Notes_Player_Dealer_Correlation && cd ../../
+
 For example: Notes_Player_Analysis.txt
+
 Step 2: Gathering Evidence
 Your next task is to move evidence from the specific days on which Lucky Duck experienced heavy losses at the roulette tables.
 
 Navigate to your HOME directory where you created the Lucky_Duck_Investigations directory and run the following command to set up the evidence files:
+ #Must run this command to get the necessary files for evidence collection
 
 wget "https://drive.google.com/uc?id=1ZLY_fuFu3wz7tOlxf-GUrnvp3htuGKSa" -O 3-HW-setup-evidence && chmod +x ./3-HW-setup-evidence && ./3-HW-setup-evidence
+
 After running this command, your current directory should have the following subdirectories:
 
 Dealer_Schedules_0310: Contains the dealer schedules.
