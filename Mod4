@@ -1,0 +1,1 @@
+This module is focused on utilising the command line and some commands for adding/deleting groups and users, changing user ownership, and finding user and group ID's, and cracking passwords using John the Ripper.  Then briefly exploring a vulnerability using the less command.
