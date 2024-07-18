@@ -51,7 +51,7 @@ mkdir Dealer_Analysis Player_Analysis Player_Dealer_Correlation
 
 Create empty files called Notes_<Directory Name>.txt under each subdirectory to store investigation notes.
 
-cd Dealer_Analysis && touch Notes_Dealer_Analysis && cd ../Player_Analysis && touch Notes_Player_Analysis && cd ../Player_Dealer_Correlation && touch Notes_Player_Dealer_Correlation && cd ../../
+cd Dealer_Analysis && touch Notes_Dealer_Analysis.txt && cd ../Player_Analysis && touch Notes_Player_Analysis.txt && cd ../Player_Dealer_Correlation && touch Notes_Player_Dealer_Correlation.txt && cd ../../
 
 For example: Notes_Player_Analysis.txt
 
@@ -61,6 +61,7 @@ Your next task is to move evidence from the specific days on which Lucky Duck ex
 Navigate to your HOME directory where you created the Lucky_Duck_Investigations directory and run the following command to set up the evidence files:
  #Must run this command to get the necessary files for evidence collection
 
+cd ~
 wget "https://drive.google.com/uc?id=1ZLY_fuFu3wz7tOlxf-GUrnvp3htuGKSa" -O 3-HW-setup-evidence && chmod +x ./3-HW-setup-evidence && ./3-HW-setup-evidence
 
 After running this command, your current directory should have the following subdirectories:
@@ -72,7 +73,13 @@ The Dealer_Schedules_0310 and Roulette_Player_WinLoss_0310 directories contain t
 
 Since the losses occurred on March 10, 12, and 15, move the schedules for those days into the directory Dealer_Analysis.
 
+cd Dealer_schedules_0310
+mv -t /Lucky_Duck_Investigations/Roulette_Loss_Investigation/Dealer_Analysis/ 0310* 0312* 0315*
+
 Move the files for those days into the directory Player_Analysis.
+
+cd ../Roulette_Player_WinLoss_0310
+mv -t /Lucky_Duck_investigations/Roulette_Loss_Investigation/Player_Analysis/ 0310* 0312* 0315*
 
 Step 3: Correlating the Evidence
 Your next task is to correlate the large losses from the roulette tables with the dealer schedule. This will help you determine which dealer and player are colluding to steal money from Lucky Duck.
@@ -84,25 +91,62 @@ Complete the player analysis with the following steps:
 
 Navigate to the Player_Analysis directory.
 
+cd /Lucky_Duck_investigations/Roulette_Loss_Investigation/Player_Analysis/
+
 Use grep to isolate all of the losses that occurred on March 10, 12, and 15.
+
+cat *_Player_win_loss_data.txt | grep - * >> Roulette_Losses.txt
 
 Place those results in a file called Roulette_Losses.txt.
 
 Preview the file Roulette_Losses.txt and analyze the data.
 
+cat Roulette_losses.txt
+
 Record the following in the Notes_Player_Analysis.txt file:
+
+nano Notes_Player_Analysis.txt
 
 The times the losses occurred on each day.
 Whether there is a certain player who was playing during each of those times.
 The total count of times this player was playing. > Hint: Use the wc command to find this value.
+
+grep "Mylie Schneider' | wc -l
+ # all other players played 1x 
+
 Complete the dealer analysis with the following steps:
 
 Navigate to the Dealer_Analysis directory.
 
+cd ../Dealer_Analysis
+
 This file contains the dealer schedules for the various Lucky Duck casino games: Blackjack, Roulette, and Texas Hold 'Em.
 
 Preview the schedule to view the format and to understand how the data is separated.
+
+head -5 *_Dealer_schedule.txt
+#the data is separated by spaces.  The time (1) and meridian (2) are listed first, then black daeler names (3,4), roulette (5,6), texas holdem (7,8) 
+
 Using your findings from the player analysis, create a separate script to look at each day and time that you determined losses occurred. Use awk, pipes, and grep to isolate out the following four fields:
+
+# 0310 losses
+cat 0310_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '05:00:00 AM' > Dealers_working_during_losses.txt
+cat 0310_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '08:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0310_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '11:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0310_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '02:00:00 PM' >> Dealers_working_during_losses.txt
+cat 0310_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '08:00:00 PM' >> Dealers_working_during_losses.txt
+
+# 0312 losses
+cat 0312_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '05:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0312_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '08:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0312_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '11:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0312_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '02:00:00 PM' >> Dealers_working_during_losses.txt
+cat 0312_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '08:00:00 PM' >> Dealers_working_during_losses.txt
+
+# 0315 losses
+cat 0315_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '05:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0315_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '08:00:00 AM' >> Dealers_working_during_losses.txt
+cat 0315_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep '02:00:00 PM' >> Dealers_working_during_losses.txt
 
 Time
 
@@ -121,12 +165,14 @@ Preview your file Dealers_working_during_losses.txt, and analyze the data.
 
 Record the following in the Notes_Dealer_Analysis.txt file:
 
-The primary dealer working at the times where losses occurred.
-
-How many times the dealer worked when major losses occurred.
+The primary dealer working at the times where losses occurred. Billy Jones
+ 
+How many times the dealer worked when major losses occurred. 13 times
 
 Complete the player/employee correlation.
 In the notes file of the Player_Dealer_Correlation directory, add a summary of your findings noting the player and dealer you believe are colluding to scam Lucky Duck.
+
+nano Notes_Player_Dealer_Correlation 
 
 Make sure to document your specific reasons for this finding.
 
@@ -138,6 +184,15 @@ They've now tasked you with building a shell script that can easily analyze futu
 Complete the following tasks:
 
 Remain in the Dealer_Analysis directory. Develop a shell script called roulette_dealer_finder_by_time.sh that can analyze the employee schedule to easily find the roulette dealer at a specific time.
+
+date=$1
+time=$2
+
+cat $1_Dealer_schedule.txt | awk '{print $1, $2, $5, $6}' | grep $2 > roulette_dealer_finder_by_time.sh
+
+chmod 777 roulette_dealer_finder_by_time.sh
+
+./roulette_dealer_finder_by_time.sh 0312 '08 AM'
 
 HINT
 Design the shell script to accept the following two arguments:
@@ -164,5 +219,6 @@ Roulette_Losses.txt
 Dealers_working_during_losses.txt
 Your shell script(s)
 Compress the Player_Dealer_Correlation folder to a zip file, and submit it through Canvas.
+
 
 Use the following documentLinks to an external site. for assistance with zipping and submitting homework from your weblab.
