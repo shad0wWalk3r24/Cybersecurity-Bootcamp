@@ -1,53 +1,59 @@
-nstructions
+Instructions
 For each of the following steps, you will need to run the correct command and confirm the results. Take notes of those results as you will be using it for the quiz. 
 Step 1: Ensure Permissions on Sensitive Files
 The /etc/ directory is where system configuration files exist. Start by navigating to this directory with cd /etc/.
 Inspect the file permissions of each of the following files. You should have already done this during an in-class activity, but double check them now. If any file's permissions do not match the descriptions listed here, update the file's permissions.
     1. Permissions on /etc/shadow should allow only root read and write access.
-        a. ls -l (verify current permissions)
-        b. chmod 600 /etc/shadow
-        c. ls -l (verify permissions changed)
+        a. command to check current permissions: ls -l /etc/shadow
+        b. current permissions: -rw-r-----
+        c. command to change permissions: sudo chmod 600 /etc/shadow
+        d. command to verify permissions changed: ls -l /etc/shadow
+        e. updated permissions: -rw-------
     2. Permissions on /etc/gshadow should allow only root read and write access.
-        a. ls -l (verify current permissions)
-        b. chmod 600 /etc/gshadow
-        c. ls -l (verify current permissions)
+        a. check current permissions: ls -l /etc/gshadow
+        b. current permissions: -rw-r-----
+        c. command to change permissions: sudo chmod 600 /etc/gshadow
+        d. command to verify permissions changed: ls -l /etc/gshadow
+        e. updated permissions: -rw-------
     3. Permissions on /etc/group should allow root read and write access, and allow everyone else read access only.
-        a. ls -l (verify current permissions)
-        b. chmod 604 /etc/group
-        c. ls -l (verify current permissions)
+        a. commamd to check current permissions: ls -l /etc/group
+        b. current permissions: -rw-r--r--
+        c. command to change permissions: no need to change permissions
+        d. command to verify permissions changed: n/a
+        e. verify permissions changed: n/a 
     4. Permissions on /etc/passwd should allow root read and write access, and allow everyone else read access only.
-        a. ls -l (verify current permissions)
-        b. chmod 604 /etc/passwd
+        a. command to check current permissions: ls -l /etc/passwd
+        b. current permissions: -rw-r--r--
+        c. command to change permissions: no need to change permissions
+        d. command to veify permissions changed: n/a
+        e. updated permissions: n/a
+
 hint 
 Run the following command to view the file permissions: ls -l <file>.
 If permissions need changing or modifying, use the chmod command.
 Step 2: Create User Accounts
 In this step, you'll set up various users in the system. For this exercise, use the useradd command. Research this command to determine how to best use this tool to create the user accounts. The necessary commands do not require that you work from a specific directory.
     1. Add user accounts for sam, joe, amy, sara, and admin1.
-        1. sudo adduser --system --ingroup  
+        a. sudo adduser -m sam
+        b. sudo adduser -m joe
+        c. sudo adduser -m amy
+        d. sudo adduser -m sara
+        e. sudo usermod -m admin1
 hint 
 In order to add users to the system, you need to run the command with sudo.
     2. Make sure that only the admin1 user has general sudo group access. This requires a command that will allow user modifications.
-      a. sudo -- 
+      a. sudo adduser -aG sudo admin1  
 Step 3: Create User Group and Collaborative Folder
 Now, you'll run the commands to fully set up a group on your system.
 This requires you to create a group, add users to it, create a shared group folder, and set the group folder owners for this shared folder.  
     1. Add the group engineers to the system.
-        1. sudo groupadd engineers
+        1. sudo groupadd engineers 
     2. Add users sam, joe, amy, and sara to the managed group. The process is similar to the one you used to add admin1 to the sudo group in the previous step. watch this video: https://www.youtube.com/watch?v=GnlgAD8-GhE
-        1. sudo usermod –aG engineers sam
-            1. id sam
-        2. sudo usermod –aG engineers joe 
-            1. id joe
-        3. sudo usermod –aG engineers amy 
-            1. id amy
-        4. sudo usermod –aG engineers sara
-            1. id sara
-
+        1. sudo groupadd -U engineers amy,sam,joe,sara ???
     3. Create a shared folder for this group: /home/engineers.
-        1. 
+        1. mkdir /home/engineers
     4. Change ownership on the new engineers' shared folder to the engineers group.
-        1. chown 
+        1. sudo chown :engineeers engineers 
 Step 4: Lynis Auditing
 The final step on your administrator's list involves running an audit against the system in order to harden it. You'll use the system and security auditing tool Lynis to do so.
     1. Install the Lynis package to your system if it is not already installed.
@@ -55,7 +61,7 @@ The final step on your administrator's list involves running an audit against th
     2. Check the Lynis documentation for instructions on how to run a system audit.
         1. https://www.howtogeek.com/674288/how-to-audit-your-linux-systems-security-with-lynis/
         2. https://opensource.com/article/20/5/linux-security-lynis
-
+        3. man lynis
     3. Run a Lynis system audit with sudo.
         1. sudo lynis audit system
         2. ls -l /var/log/lynis.log
