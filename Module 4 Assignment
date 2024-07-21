@@ -49,7 +49,10 @@ This requires you to create a group, add users to it, create a shared group fold
     1. Add the group engineers to the system.
         1. sudo groupadd engineers 
     2. Add users sam, joe, amy, and sara to the managed group. The process is similar to the one you used to add admin1 to the sudo group in the previous step. watch this video: https://www.youtube.com/watch?v=GnlgAD8-GhE
-        1. sudo groupadd -U engineers amy,sam,joe,sara ???
+        1. sudo usermod -aG engineers amy
+        2. sudo usermod -aG engineers joe
+        3. sudo usermod -aG engineers sara
+        4. sudo usermod -aG engineers sam
     3. Create a shared folder for this group: /home/engineers.
         1. mkdir /home/engineers
     4. Change ownership on the new engineers' shared folder to the engineers group.
