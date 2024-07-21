@@ -34,11 +34,11 @@ If permissions need changing or modifying, use the chmod command.
 Step 2: Create User Accounts
 In this step, you'll set up various users in the system. For this exercise, use the useradd command. Research this command to determine how to best use this tool to create the user accounts. The necessary commands do not require that you work from a specific directory.
     1. Add user accounts for sam, joe, amy, sara, and admin1.
-        a. sudo adduser -m sam
-        b. sudo adduser -m joe
-        c. sudo adduser -m amy
-        d. sudo adduser -m sara
-        e. sudo usermod -m admin1
+        a. sudo adduser sam
+        b. sudo adduser joe
+        c. sudo adduser amy
+        d. sudo adduser sara
+        e. sudo usermod admin1
 hint 
 In order to add users to the system, you need to run the command with sudo.
     2. Make sure that only the admin1 user has general sudo group access. This requires a command that will allow user modifications.
